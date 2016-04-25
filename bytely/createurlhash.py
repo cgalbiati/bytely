@@ -5,14 +5,14 @@ from .models import Url
 
 # returns unique string for the short link or existing short link if url is already in db
 def create_entry(source_url):
-    # shaw hash
-    hashed_url = hashlib.sha224(source_url).hexdigest()
 
     # add http so redirect works
     if not 'http' in source_url:
         source_url = 'http://' + source_url
     # it's up to the user to put in a valid link
-    print('creating for', source_url)
+
+    # shaw hash
+    hashed_url = hashlib.sha224(source_url).hexdigest()
 
     #max length of hash to try
     max_length = 4
@@ -24,16 +24,16 @@ def create_entry(source_url):
         for i in range(2, max_length):
             hash_slices.append(hashed_url[0:i])
 
-        print('hash slices', hash_slices)
         # query db for slices
         found = Url.objects.filter(short_url__in=hash_slices).extra(select={'length':'Length(short_url)'}).order_by('-length')
-        print('found', found)
 
         # find shortest avail
 
         # look for url match
         for item in found: 
             if item.source_url == source_url:
+                # this will not match variations such as www vs no wwww, but it should catch most overlaps
+                # to improve, could regext after the // or www (*would also have to check https, because those should be treated separately)
                 return item
 
         # see if there is an available hash with length less than or equal to max_length
