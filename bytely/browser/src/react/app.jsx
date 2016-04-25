@@ -1,6 +1,6 @@
 "use strict"
 import React from 'react';
-import UrlInput from './input.jsx';
+import UrlInput from './url-input.jsx';
 import Result from './result.jsx';
 import { ajax } from 'jquery';
 import ReactDOM from 'react-dom';

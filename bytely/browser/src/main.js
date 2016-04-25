@@ -1,3 +1,3 @@
-var app = require('./src/app.js')
+var app = require('./react/app.jsx')
 
 app.renderApp();

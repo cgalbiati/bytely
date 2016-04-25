@@ -1,5 +1,5 @@
 'use strict';
-
+import React from 'react';
 
 // shows a loading image while waiting on requests
 // I made this its own component because it seemed like the kind of thing that would be re-used, 
