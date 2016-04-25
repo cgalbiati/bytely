@@ -1,7 +1,7 @@
 from django.test import TestCase
 import unittest
 from .models import Url
-from createurlhash import create_entry
+from .createurlhash import create_entry
 
 # this is not meant to be complete, it is just a sample
 

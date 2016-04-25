@@ -5,10 +5,11 @@ Bytely is a url shortener.  The user inputs a source url, and the app creates a 
 
 ### Installation
 You need Python 2.7^ and pip. If you don't have these, see how [here][pip].
+You also need psql, with a db named 'flocab' (or another table name set as an env variable - DB_NAME 
 
 ```sh
-$ git clone [git-repo-url] extra-credit
-$ cd extra-credit
+$ git clone https://github.com/cgalbiati/bytely bytely
+$ cd bytely
 $ pip install -r requirements.txt
 ```
 
