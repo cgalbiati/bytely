@@ -1,5 +1,5 @@
 """
-WSGI config for mysite project.
+WSGI config for project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -8,9 +8,8 @@ https://docs.djangoproject.com/en/1.9/howto/deployment/wsgi/
 """
 
 import os
-
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bytely.settings")
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
-
-application = get_wsgi_application()
+from dj_static import Cling  # for serving static files
+application = Cling(get_wsgi_application())

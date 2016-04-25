@@ -1,0 +1,47 @@
+
+.loader-img{
+  width: 100pt;
+  height: 100pt;
+  border-radius: 50pt;
+}
+
+input {
+  padding: 5pt;
+  border-radius: 4pt;
+  margin: 5pt;
+}
+
+body {
+  background:  #96a5b3; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #96a5b3 ,  #82c9c9); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #96a5b3,  #82c9c9); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #96a5b3,  #82c9c9); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #96a5b3 ,  #82c9c9); /* Standard syntax */
+}
+
+#App{
+  position: absolute;
+  width: 50%;
+  min-width: 200pt;
+  top:100pt;
+  margin: auto auto;
+  background: #dbf0f0;
+  border-radius: 10pt;
+  box-shadow: 0 0 8pt gray;
+  padding: 10pt;
+  text-align: center;
+  left: 0;
+  right: 0;
+
+}
+
+#submit-btn {
+  background-color: #82c9c9;
+  border: #1f4747;
+  box-shadow: 0 0 6pt #1f4747;
+  padding: 4pt;
+}
+
+#submit-btn:hover {
+  background-color: #4db3b3;
+}

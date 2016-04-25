@@ -2,3 +2,6 @@
 *.DS_Store
 *.pyc
 __pycache__
+
+bytely/browser/node_modules
+bytely/browser/public/build
